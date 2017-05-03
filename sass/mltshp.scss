@@ -45,19 +45,20 @@ h1 {
     h1 {
         text-align: center;
         text-shadow: 0 0 0.1em rgba(black, 0.8);
+        margin: .67em;
     }
 
     footer {
-        bottom: 0;
+        top: 0;
         height: 200px;
         overflow: hidden;
         position: absolute;
         right: 0;
-        width: 200px;
+        left: 0;
 
         a {
             background-color: white;
-            bottom: -25px;
+            top: -45px;
             box-shadow: 0 0 0.1em rgba(black, 0.8);
             color: $primary-color;
             display: block;
@@ -65,13 +66,22 @@ h1 {
             line-height: 1;
             padding: 0.5em 0;
             position: absolute;
-            right: -100px;
             text-align: center;
             text-decoration: none;
-            transform-origin: bottom left;
-            transform: rotate(-45deg);
             white-space: nowrap;
             width: 250px;
+
+            &.contribute {
+                right: -120px;
+                transform-origin: top left;
+                transform: rotate(45deg);
+            }
+
+            &.status {
+                left: -120px;
+                transform-origin: top right;
+                transform: rotate(-45deg);
+            }
         }
     }
 }
